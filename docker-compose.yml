@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  bot-wpp:
+    container_name: bot-wpp
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    env_file:
+      - .env
+  
