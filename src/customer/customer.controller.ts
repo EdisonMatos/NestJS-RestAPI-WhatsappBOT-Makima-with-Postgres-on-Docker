@@ -42,7 +42,7 @@ export class CustomerController {
     return this.customerService.findAll();
   }
 
-  @ApiOperation({ summary: 'Update customers info' })
+  @ApiOperation({ summary: 'Update customers infos' })
   @ApiResponse({
     status: HttpStatus.OK,
     description: 'The customer info has been updated successfully.',
