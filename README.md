@@ -36,22 +36,26 @@
 ## Descrição do projeto 📑
 
 <p align="justify">
-  Esta API é uma aplicação no padrão REST que utiliza os métodos GET, CREATE, PUT e DELETE nas requisições usando o protocolo HTTP. Tem por finalidade manusear um backend totalmente funcional, aplicando conhecimento em Node (com o framework Express), somado a um banco de dados NoSQL (MongoDB) e com deploy feito na Vercel, possibilitando um teste com a aplicação já no ar. 
+  Esta API é uma aplicação que faz parte do backoffice do Makima Whatsapp Bot, um sistema de bot que usa inteligência artificial para auxiliar grupos de estudo em grupos no whatsapp.
 </p>
 
 <br>
 
 ## Funcionalidades da aplicação 🗃
 
-:heavy_check_mark: Armazena dados na própria memória
+:heavy_check_mark: Lista, insere, atualiza e remove conjunto de dados num banco de dados relacional Postgres rodando em um container no Docker
 
-:heavy_check_mark: Lista, insere, atualiza e remove conjunto de dados
+:heavy_check_mark: Cria containers dentro do Docker com o Docker Compose
 
-:heavy_check_mark: Valida entrada de dados e endpoints contra entradas incorretas
+:heavy_check_mark: Documenta toda a API de forma otimizada com o Swagger, permitindo facilmente ser consumida por outros usuários
+
+:heavy_check_mark: Utiliza o PrismaORM para controle de migrations, comunicação e visualização do banco de dados
+
+:heavy_check_mark: Armazena informações sensíveis em variáveis de ambiente
+
+:heavy_check_mark: Valida entrada de dados como email, telefone e datas nas requisições 
 
 :heavy_check_mark: Retorna mensagens de erro personalizadas
-
-:heavy_check_mark: Usa do terminal para fins de instrução
 
 <br>
 
