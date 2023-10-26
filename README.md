@@ -1,3 +1,6 @@
+## API REST - Backend pro Makima Whatsapp BOT com  Typescript, NodeJs, NestJS, Docker, Postgres e Swagger
+
+
 ## Dependencies & Services
 - Prisma https://www.prisma.io
 - NestJs - https://nestjs.com
