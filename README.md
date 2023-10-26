@@ -71,6 +71,8 @@ Você precisa ter os itens abaixo instalados na sua máquina para rodar a aplica
 
 :white_check_mark: [GIT](https://git-scm.com/downloads)
 
+:white_check_mark: [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
 Algum client http para fazer requisições para APIs. Recomendo qualquer uma das opções abaixo:
 
 :white_check_mark: [Postman](https://www.postman.com/downloads/) ou :white_check_mark: [Insomnia](https://insomnia.rest/download) ou :white_check_mark: [Thuder Client - Extensão do VS Code](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
@@ -86,24 +88,45 @@ git clone https://github.com/EdisonMatos/ExpressJS-Full-Application.git
 ```
 Acesse o conteúdo da pasta baixada através do comando:
 ```
-cd API-REST-Lista-de-Usuarios-JS-NodeJS-e-ExpressJS
+cd API-REST-Backend-pro-Makima-Wapp-BOT-Typescript-NodeJs-NestJS-Docker-Postgres-Swagger
 ```
-Dentro da pasta, instale as dependências necessárias para rodar a aplicação através do comando:
+Dentro da pasta, instale o yarn que será o nosso gerenciador de bibliotecas
 ```
-npm install
+npm install yarn
+```
+ou
+```
+brew install yarn (mac)
+```
+
+A seguir, instale as dependências necessárias para rodar a aplicação através do comando:
+
+```
+yarn install
+```
+Abra o Docker Desktop na sua máquina e após se certificar que ele já inicializou, execute o comando:
+
+```
+yarn infra:up
+```
+
+Agora com o container criado, insira o banco de dados no volume já criado através do comando:
+
+```
+npx prisma db push
 ```
 
 Agora, para iniciar a aplicação:
 ```
-npm run dev
+yarn start:dev
 ```
 
 Caso precise encerrar a aplicação:
 ```
 cmd + c (no mac)
-
+```
 ou
-
+```
 ctrl + c (no windows)
 ```
 
