@@ -1,3 +1,206 @@
+# 🚀 API Controle de Clientes e Grupos - Makima Bot para WhatsApp
+
+## 📜 Descrição
+
+Este repositório contém o código-fonte de uma API para o Makima Backoffice, uma aplicação de gerenciamento de clientes e grupos. A API é parte integrante de um bot para WhatsApp que utiliza inteligência artificial para responder dúvidas de alunos em grupos de estudo ou profissionais que necessitam de consultas rápidas.
+<br>
+<br>
+
+## 🛠️ Stack Backend
+
+Este projeto utiliza as seguintes tecnologias e ferramentas na área de desenvolvimento de sistemas web:
+
+- **Node.js e npm:** Ambiente de execução e gerenciador de pacotes para JavaScript.
+- **NestJS:** Framework para construção de aplicativos server-side eficientes e escaláveis em Node.js.
+- **Docker e Docker Compose:** Para facilitar a criação e gerenciamento de ambientes isolados.
+- **PostgreSQL:** Sistema de gerenciamento de banco de dados relacional.
+- **Prisma ORM:** Mapeamento de dados e interação com o banco de dados.
+- **Swagger:** Ferramenta para documentação de APIs.
+- **Git:** Controle de versão distribuído.
+
+<br>
+
+## 📋 Pré-requisitos
+
+- **Node.js e npm:** Instalados em [https://nodejs.org/](https://nodejs.org/).
+- **Git:** Baixe em [https://git-scm.com/](https://git-scm.com/).
+- **Docker Desktop:** Necessário para o banco de dados PostgreSQL. Faça o download em [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop).
+- **Ferramentas de Teste de API:** Postman [https://www.postman.com/downloads/](https://www.postman.com/downloads/), Insomnia [https://insomnia.rest/download/](https://insomnia.rest/download/), ou Thunder Client no Visual Studio Code.
+
+
+<br>
+
+## ⚙️ Configuração do Projeto
+
+1. **Clone o Repositório:**
+
+    ```bash
+    git clone https://github.com/seu-usuario/nome-do-repositorio.git
+    ```
+
+2. **Instale as Dependências:**
+
+    ```bash
+    cd nome-do-repositorio
+    npm install
+    ```
+
+3. **Configuração do Ambiente**
+
+   Crie um arquivo `.env` na raiz do projeto com o seguinte conteúdo:
+
+   ```env
+   DATABASE_URL=postgresql://postgres:12345@localhost:5432/postgres
+   API_PORT=3000
+   ```
+
+   Use `.env.example` como referência.
+
+4. **Configuração da Infraestrutura**
+
+   Use Docker Compose para subir o banco de dados PostgreSQL:
+
+   ```bash
+   npm run infra:up
+   ```
+
+5. **Prisma ORM**
+
+   Execute o Prisma generate para gerar o código:
+
+   ```bash
+   npm run gen
+   ```
+
+   Aplique migrações com:
+
+   ```bash
+   npx prisma db push
+   ```
+
+6. **Executando o Projeto**
+
+    ```bash
+    npm start
+    ```
+
+    Acesse [http://localhost:3000](http://localhost:3000).
+
+
+<br>
+
+## 📘 Documentação Swagger
+
+A documentação Swagger fornece uma interface interativa para explorar os endpoints da API. Após iniciar o projeto, acesse [http://localhost:3000/swagger](http://localhost:3000/swagger) para visualizar e testar os endpoints disponíveis. Utilize esta ferramenta para entender a estrutura da API e facilitar o desenvolvimento e testes.
+
+
+<br>
+
+## 🚀 Fazendo Requisições para a API
+
+Para interagir com os endpoints da API, você pode usar ferramentas como Postman, Insomnia ou Thunder Client no Visual Studio Code. Acesse a documentação Swagger em [http://localhost:3000/swagger](http://localhost:3000/swagger) para obter detalhes sobre os endpoints e parâmetros necessários.
+
+
+<br>
+
+## 🛣️ Endpoints
+
+### Cliente
+
+#### Criar Cliente
+
+- **Método:** `POST`
+- **Rota:** `localhost:3000/customers`
+- **Corpo da Requisição (Exemplo):**
+  ```json
+  {
+    "phone": "123456789",
+    "name": "João da Silva",
+    "credit": 100.0,
+    "email": "joao.silva@example.com"
+  }
+  ```
+- **Resposta:** Cliente criado com sucesso.
+
+#### Listar Todos os Clientes
+
+- **Método:** `GET`
+- **Rota:** `localhost:3000/customers`
+- **Resposta:** Lista de todos os clientes cadastrados.
+
+#### Atualizar Informações do Cliente
+
+- **Método:** `PATCH`
+- **Rota:** `localhost:3000/customers/{id}`
+- **Corpo da Requisição (Exemplo):**
+  ```json
+  {
+    "name": "João Silva",
+    "credit": 150.0
+  }
+  ```
+- **Resposta:** Informações do cliente atualizadas com sucesso.
+
+#### Buscar Cliente por ID
+
+- **Método:** `GET`
+- **Rota:** `localhost:3000/customers/{id}`
+- **Resposta:** Informações do cliente com o ID especificado.
+
+#### Excluir Cliente por ID
+
+- **Método:** `DELETE`
+- **Rota:** `localhost:3000/customers/{id}`
+- **Resposta:** Cliente excluído com sucesso.
+
+### Grupo
+
+#### Criar Grupo
+
+- **Método:** `POST`
+- **Rota:** `localhost:3000/groups`
+- **Corpo da Requisição (Exemplo):**
+  ```json
+  {
+    "chatId": "987654321",
+    "customerId": "id-do-cliente"
+  }
+  ```
+- **Resposta:** Grupo criado com sucesso.
+
+#### Listar Todos os Grupos
+
+- **Método:** `GET`
+- **Rota:** `localhost:3000/groups`
+- **Resposta:** Lista de todos os grupos cadastrados.
+
+#### Excluir Grupo por ID
+
+- **Método:** `DELETE`
+- **Rota:** `localhost:3000/groups/{id}`
+- **Resposta:** Grupo excluído com sucesso.
+
+
+<br>
+
+## 🤝 Contribuição
+
+Se deseja contribuir para o desenvolvimento deste projeto, siga os passos abaixo:
+
+1. Faça um fork do projeto.
+2. Crie uma branch para suas alterações: `git checkout -b feature/nome-da-sua-feature`.
+3. Faça as alterações desejadas e commit: `git commit -m 'Adiciona nova feature'`.
+4. Push para a branch: `git push origin feature/nome-da-sua-feature`.
+5. Abra um pull request para revisão.
+
+
+<br>
+
+## 📄 Licença
+
+Este projeto é licenciado sob a [Licença MIT](LICENSE).
+
+<!--
 <h1>API REST - Backend pro Makima Whatsapp BOT com Typescript, NodeJs, NestJS, Docker, Postgres e Swagger</h1>
 
 <p align="center">
@@ -11,7 +214,7 @@
 <br>
 <br>
   <img src="https://img.shields.io/static/v1?label=Documentacao&message=Swagger&color=green&style=for-the-badge"/>
-  <!--<img src="https://img.shields.io/static/v1?label=Vercel&message=deploy&color=blue&style=for-the-badge&logo=vercel"/>--> 
+  <!--<img src="https://img.shields.io/static/v1?label=Vercel&message=deploy&color=blue&style=for-the-badge&logo=vercel"/> 
 </p>
 <br>
 
@@ -25,7 +228,7 @@
 
 :small_blue_diamond: [Funcionalidades da aplicação](#funcionalidades-da-aplicação)
 
-<!--:small_blue_diamond: [Deploy da Aplicação](#link-da-aplicação-dash)-->
+<!--:small_blue_diamond: [Deploy da Aplicação](#link-da-aplicação-dash)-
 
 :small_blue_diamond: [Pré-requisitos](#pré-requisitos)
 
@@ -61,7 +264,7 @@
 
 <!--## Link da aplicação :dash:
 
-> Em breve: Na Vercel (https://vercel.com/) -->
+> Em breve: Na Vercel (https://vercel.com/) -
 
 ## Pré-requisitos 🔧
 
