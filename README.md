@@ -24,7 +24,7 @@ Este projeto utiliza as seguintes tecnologias e ferramentas na área de desenvol
 
 <br>
 
-## 📋 Pré-requisitos
+## Pré-requisitos 📋 
 
 - **Node.js e npm:** Baixe em [https://nodejs.org/](https://nodejs.org/).
 - **Git:** Baixe em [https://git-scm.com/](https://git-scm.com/).
