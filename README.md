@@ -1,9 +1,5 @@
 # 🚀 API Controle de Clientes e Grupos - Makima Bot para WhatsApp
 
-## Tópicos 🔎
-
-:small_blue_diamond: [Pré Requisitos](##pré-requisitos)
-
 ## 📜 Descrição
 
 Este repositório contém uma API REST que compõe o backend de um bot para WhatsApp que utiliza inteligência artificial para responder dúvidas de alunos em grupos de estudo ou profissionais que necessitam de consultas rápidas.
