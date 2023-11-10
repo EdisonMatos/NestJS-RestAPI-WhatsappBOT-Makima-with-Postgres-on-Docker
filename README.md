@@ -2,11 +2,11 @@
 
 ## 📜 Descrição
 
-Este repositório contém o código-fonte de uma API para o Makima Backoffice, uma aplicação de gerenciamento de clientes e grupos. A API é parte integrante de um bot para WhatsApp que utiliza inteligência artificial para responder dúvidas de alunos em grupos de estudo ou profissionais que necessitam de consultas rápidas.
+Este repositório contém uma API REST que compõe o backend de um bot para WhatsApp que utiliza inteligência artificial para responder dúvidas de alunos em grupos de estudo ou profissionais que necessitam de consultas rápidas.
 <br>
 <br>
 
-## 🛠️ Stack Backend
+## 🛠️ Stacks utilizadas
 
 Este projeto utiliza as seguintes tecnologias e ferramentas na área de desenvolvimento de sistemas web:
 
@@ -16,32 +16,32 @@ Este projeto utiliza as seguintes tecnologias e ferramentas na área de desenvol
 - **PostgreSQL:** Sistema de gerenciamento de banco de dados relacional.
 - **Prisma ORM:** Mapeamento de dados e interação com o banco de dados.
 - **Swagger:** Ferramenta para documentação de APIs.
-- **Git:** Controle de versão distribuído.
+- **Git:** Controle de versionamento.
 
 <br>
 
 ## 📋 Pré-requisitos
 
-- **Node.js e npm:** Instalados em [https://nodejs.org/](https://nodejs.org/).
+- **Node.js e npm:** Baixe em [https://nodejs.org/](https://nodejs.org/).
 - **Git:** Baixe em [https://git-scm.com/](https://git-scm.com/).
-- **Docker Desktop:** Necessário para o banco de dados PostgreSQL. Faça o download em [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop).
-- **Ferramentas de Teste de API:** Postman [https://www.postman.com/downloads/](https://www.postman.com/downloads/), Insomnia [https://insomnia.rest/download/](https://insomnia.rest/download/), ou Thunder Client no Visual Studio Code.
+- **Docker Desktop:** Necessário para o banco de dados PostgreSQL. Baixe em [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop).
+- **Ferramentas de Teste de API:** Postman [https://www.postman.com/downloads/](https://www.postman.com/downloads/), Insomnia [https://insomnia.rest/download/](https://insomnia.rest/download/), ou Thunder Client (extensão no Visual Studio Code).
 
 
 <br>
 
 ## ⚙️ Configuração do Projeto
 
-1. **Clone o Repositório:**
+1. **Abra a pasta desejada e clone o repositório:**
 
     ```bash
-    git clone https://github.com/seu-usuario/nome-do-repositorio.git
+    git clone https://github.com/EdisonMatos/Backend-Makima-Wapp-BOT-Typescript-NodeJs-NestJS-Docker-Postgres-Swagger.git
     ```
 
-2. **Instale as Dependências:**
+2. **Instale as dependências:**
 
     ```bash
-    cd nome-do-repositorio
+    cd Backend-Makima-Wapp-BOT-Typescript-NodeJs-NestJS-Docker-Postgres-Swagger
     npm install
     ```
 
@@ -56,7 +56,7 @@ Este projeto utiliza as seguintes tecnologias e ferramentas na área de desenvol
 
    Use `.env.example` como referência.
 
-4. **Configuração da Infraestrutura**
+4. **Configuração da infraestrutura**
 
    Use Docker Compose para subir o banco de dados PostgreSQL:
 
@@ -64,15 +64,15 @@ Este projeto utiliza as seguintes tecnologias e ferramentas na área de desenvol
    npm run infra:up
    ```
 
-5. **Prisma ORM**
+5. **Iniciando o Prisma ORM**
 
-   Execute o Prisma generate para gerar o código:
+   Execute o Prisma generate para gerar o código sql:
 
    ```bash
    npm run gen
    ```
 
-   Aplique migrações com:
+   Em seguida aplique as migrações com:
 
    ```bash
    npx prisma db push
@@ -84,12 +84,12 @@ Este projeto utiliza as seguintes tecnologias e ferramentas na área de desenvol
     npm start
     ```
 
-    Acesse [http://localhost:3000](http://localhost:3000).
+7. Acesse [http://localhost:3000](http://localhost:3000).
 
 
 <br>
 
-## 📘 Documentação Swagger
+## 📘 Documentação com Swagger
 
 A documentação Swagger fornece uma interface interativa para explorar os endpoints da API. Após iniciar o projeto, acesse [http://localhost:3000/swagger](http://localhost:3000/swagger) para visualizar e testar os endpoints disponíveis. Utilize esta ferramenta para entender a estrutura da API e facilitar o desenvolvimento e testes.
 
@@ -105,7 +105,7 @@ Para interagir com os endpoints da API, você pode usar ferramentas como Postman
 
 ## 🛣️ Endpoints
 
-### Cliente
+### Entidade: Cliente
 
 #### Criar Cliente
 
@@ -114,7 +114,7 @@ Para interagir com os endpoints da API, você pode usar ferramentas como Postman
 - **Corpo da Requisição (Exemplo):**
   ```json
   {
-    "phone": "123456789",
+    "phone": "11999612232",
     "name": "João da Silva",
     "credit": 100.0,
     "email": "joao.silva@example.com"
@@ -153,7 +153,7 @@ Para interagir com os endpoints da API, você pode usar ferramentas como Postman
 - **Rota:** `localhost:3000/customers/{id}`
 - **Resposta:** Cliente excluído com sucesso.
 
-### Grupo
+### Entidade: Grupo
 
 #### Criar Grupo
 
@@ -162,8 +162,8 @@ Para interagir com os endpoints da API, você pode usar ferramentas como Postman
 - **Corpo da Requisição (Exemplo):**
   ```json
   {
-    "chatId": "987654321",
-    "customerId": "id-do-cliente"
+    "chatId": "550d8954-bb6a-4fb3-91dc-8f7fa6f858bb",
+    "customerId": "ab8d25d3-3fe5-4cd4-a179-d0785d9bed00"
   }
   ```
 - **Resposta:** Grupo criado com sucesso.
@@ -198,7 +198,7 @@ Se deseja contribuir para o desenvolvimento deste projeto, siga os passos abaixo
 
 ## 📄 Licença
 
-Este projeto é licenciado sob a [Licença MIT](LICENSE).
+Este projeto é licenciado sob a Licença MIT.
 
 <!--
 <h1>API REST - Backend pro Makima Whatsapp BOT com Typescript, NodeJs, NestJS, Docker, Postgres e Swagger</h1>
@@ -464,7 +464,7 @@ Liste o time responsável pelo desenvolvimento do projeto
 | [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Diana Regina</sub>](https://github.com/Diana-ops) | [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Diana Regina</sub>](https://github.com/Diana-ops) | [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Diana Regina</sub>](https://github.com/Diana-ops) |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 
--->
+
 
 ## Licença
 
