@@ -2,7 +2,7 @@
 
 ## Tópicos 🔎
 
-:small_blue_diamond: [Pré Requisitos](##Pré-requisitos)
+:small_blue_diamond: [Pré Requisitos](##pré-requisitos)
 
 ## 📜 Descrição
 
