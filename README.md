@@ -25,7 +25,10 @@ Este projeto utiliza as seguintes tecnologias e ferramentas na área de desenvol
 - **Node.js e npm:** Baixe em [https://nodejs.org/](https://nodejs.org/).
 - **Git:** Baixe em [https://git-scm.com/](https://git-scm.com/).
 - **Docker Desktop:** Necessário para o banco de dados PostgreSQL. Baixe em [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop).
-- **Ferramentas de Teste de API:** Postman [https://www.postman.com/downloads/](https://www.postman.com/downloads/), Insomnia [https://insomnia.rest/download/](https://insomnia.rest/download/), ou Thunder Client (extensão no Visual Studio Code).
+- **Ferramentas de Teste de API:** <br>
+Postman [https://www.postman.com/downloads/](https://www.postman.com/downloads/)<br>
+Insomnia [https://insomnia.rest/download/](https://insomnia.rest/download/)<br>
+Ou Thunder Client (extensão no Visual Studio Code).
 
 
 <br>
@@ -91,8 +94,9 @@ Este projeto utiliza as seguintes tecnologias e ferramentas na área de desenvol
 
 ## 📘 Documentação com Swagger
 
-A documentação Swagger fornece uma interface interativa para explorar os endpoints da API. Após iniciar o projeto, acesse [http://localhost:3000/swagger](http://localhost:3000/swagger) para visualizar e testar os endpoints disponíveis. Utilize esta ferramenta para entender a estrutura da API e facilitar o desenvolvimento e testes.
+O Swagger UI é uma interface interativa que permite explorar e testar os endpoints da API de forma visual. Para acessar o Swagger UI e explorar os endpoints deste projeto, após ter iniciado a aplicação, acesse: [localhost:3000/swagger](localhost:3000/swagger).
 
+<img src="https://static1.smartbear.co/swagger/media/images/tools/opensource/swagger_ui.png" alt="drawing" width="500"/></img>
 
 <br>
 
@@ -180,6 +184,17 @@ Para interagir com os endpoints da API, você pode usar ferramentas como Postman
 - **Rota:** `localhost:3000/groups/{id}`
 - **Resposta:** Grupo excluído com sucesso.
 
+
+<br>
+
+## 🧑‍💻 Autores
+
+Este projeto foi desenvolvido por Edison Matos.
+
+![Edison Matos](https://avatars.githubusercontent.com/u/17342047?s=200)
+
+Edison Matos é um entusiasta da tecnologia, desenvolvedor backend de software e apaixonado por criar soluções inovadoras.<br>
+Saiba mais sobre no [GitHub](https://github.com/EdisonMatos) para descobrir mais projetos e colaborações.
 
 <br>
 
