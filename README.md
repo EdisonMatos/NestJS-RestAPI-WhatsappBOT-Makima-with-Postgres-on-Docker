@@ -57,7 +57,7 @@ Ou Thunder Client (extensão no Visual Studio Code).
    API_PORT=3000
    ```
 
-   Use `.env.example` como referência.
+   Use `.env.example` como referência. Obs: Essas variáveis de ambiente são dados sensíveis e não devem estar expostas publicamente, mas como neste caso o projeto irá rodar em localhost com um banco em uma iamgem no docker também no computador do usuário, fica mais prático informar o conteúdo do arquivo `.env` aqui para facilitar o teste da aplicação.
 
 4. **Configuração da infraestrutura**
 
