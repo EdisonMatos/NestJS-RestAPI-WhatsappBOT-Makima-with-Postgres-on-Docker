@@ -2,7 +2,7 @@
 
 ## Tópicos 🔎
 
-:small_blue_diamond: [Descrição](#Stacks-utilizadas)
+:small_blue_diamond: [Descrição](#Pré-requisitos)
 
 ## 📜 Descrição
 
