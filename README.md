@@ -1,4 +1,4 @@
-# 🚀 API Controle de Clientes e Grupos - Makima Bot para WhatsApp
+# 🚀 Makima Bot API - Bot para WhatsApp
 
 ## 📜 Descrição
 
