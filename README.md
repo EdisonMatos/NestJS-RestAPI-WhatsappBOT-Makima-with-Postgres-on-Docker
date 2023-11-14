@@ -17,6 +17,7 @@ Este projeto utiliza as seguintes tecnologias e ferramentas na área de desenvol
 - **Prisma ORM:** Mapeamento de dados e interação com o banco de dados.
 - **Swagger:** Ferramenta para documentação de APIs.
 - **Git:** Controle de versionamento.
+- **Padrão de Arquitetura:** Módulos, padrão do NestJS que se baseia no Angular.
 
 <br>
 
