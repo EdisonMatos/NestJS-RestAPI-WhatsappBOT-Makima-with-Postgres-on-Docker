@@ -38,7 +38,7 @@ Ou Thunder Client (extensão no Visual Studio Code).
 1. **Abra a pasta desejada e clone o repositório:**
 
     ```bash
-    git clone https://github.com/EdisonMatos/Backend-Makima-Wapp-BOT-Typescript-NodeJs-NestJS-Docker-Postgres-Swagger.git
+    git clone https://github.com/EdisonMatos/NestJS-RestAPI-WhatsappBOT-Makima-with-Postgres-on-Docker.git
     ```
 
 2. **Instale as dependências:**
